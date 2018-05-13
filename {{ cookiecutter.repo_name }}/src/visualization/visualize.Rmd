@@ -6,9 +6,12 @@
 
 ## Any special type of data?
 
+### Any categorical data? Any discrete data? Any outliers?
+
 ### time: take the difference between original time and the current time
 
-### index
+### The relation between index or id with those data.
+
 
 ## baseline model
 
