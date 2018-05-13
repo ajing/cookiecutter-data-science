@@ -1,24 +1,115 @@
 
-## Overall summary
-
-## NULL value and extreme values
+## Goal: 1. Get comfortable with the data; 2. find magic features
 
 
-## Any special type of data?
+## Intuition about the data
+
+### Get domain knowledge
+
+### Check if the data is intuitive (agree with domain knowledge)
+
+### Understand how the data was generated (distribution difference between training and teting)
+
+
+
+## Basic exploration
+
+### NULL value and extreme values
+
+### Any special type for each column?
 
 ### Any categorical data? Any discrete data? Any outliers?
 
-### time: take the difference between original time and the current time
+#### For categorical features, count each category
+
+### time related variable: take the difference between original time and the current time
+
+
+
+## Anonymized features
+
+### try to decode variable and guess the true meaning of the feature
+
+### Guess the featuer types: take diff and scale back if the feature is scaled
 
 ### The relation between index or id with those data.
+ 
+
+## Baseline model (use as a guidance for following analysis)
 
 
-## baseline model
 
-## feature relations
 
-### feature distributions
+## Explore feature relations
 
-### pairwise scatter plot
+### Individual features
+
+#### feature distributions
+
+#### index vs value
+
+#### statistics
+
+### Pairs
+
+#### pairwise scatter plot, scatter matrix
+
+####  Checking pairwise relation difference between training and testing
+
+
+
+### Groups
+
+#### corrplot + clustering
+
+#### index vs feature statistics
 
 ### possible new features
+
+
+
+## Understand how the data was generated (distribution difference between training and teting)
+
+### Checking pairwise relation difference between training and testing
+
+### Find the id that identify each item
+
+code example:
+```python
+import itertools
+
+# This function looks for a combination of elements 
+# with product of 639360 
+def find_prod(data):
+    # combinations of not more than 5 features
+    for n in range(1, 5):
+        # iterate through all combinations
+        for c in itertools.combinations(range(len(data)), n):
+            if data[list(c)].prod() == 639360:
+                print test_nunique.index[c]
+                return
+    print 'Nothing found'
+
+    
+find_prod(test_nunique.values)
+```
+
+```python
+import itertools
+
+def find_ncombinations(data):
+    # combinations of not more than 5 features
+    for n in range(1, 5):
+        for c in itertools.combinations(range(data.shape[1]), n):
+            print c
+            columns = test.columns[list(c)]
+            if test[columns].drop_duplicates().shape[0] == 639360:
+                print columns
+                return
+    print 'Nothing found'
+
+find_ncombinations(test)
+```python
+
+
+
