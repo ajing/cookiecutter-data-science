@@ -1,0 +1,21 @@
+
+## Overall summary
+
+## NULL value and extreme values
+
+
+## Any special type of data?
+
+### time: take the difference between original time and the current time
+
+### index
+
+## baseline model
+
+## feature relations
+
+### feature distributions
+
+### pairwise scatter plot
+
+### possible new features
