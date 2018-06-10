@@ -101,7 +101,16 @@ From the number of features to model configuration
 5. One notebook per submission
 6. Before creating a submission restart the kernel
 
+## Code organization: test/val
 
+### Use the same name `train_path` and `test_path` but different values for test/val
+
+1. `test_path = 'data/val/val.csv'`
+2. `test_path = 'data/test.csv'`
+
+### Use macros for a frequent code
+
+### Use a library with frequent operations implemented
 
 
 
