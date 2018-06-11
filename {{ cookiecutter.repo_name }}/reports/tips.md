@@ -117,11 +117,49 @@ From the number of features to model configuration
 
 3,4,5: after trying the problem individually (shut from the outside world) for a week or so then kernels are explored too.
 
+Always gain some advantages.
+
 1. Understand the problem 1d
+
+    - type of problem
+    - how BIG is the data
+    - hardware needed
+    - what the metric being test on
+
 2. Exploratory analysis 1-2d
+
+    - plot histograms of variables and whether difference between and test
+    - features versus the target variable and vs time
+    - univariate predictability metrics
+    - binning numerical features and correlation matrices
+    
 3. Define cv strategy
+
+    - consistensy
+    - Is time important
+    - Different entities than train
+    - Is it completely random
+
 4. Feature engineering (until last 3-4 days)
+
+    - every problem has its own way
+    - can be automated
+
 5. modelling (until last 3-4 days)
 6. ensembling last 3-4d
 
+    - small data requires simpler ensemble techniques (like averaging)
+    - Helps to average a few low-correlated predictions with good scores
+    - Stacking process repeats the modeling process
+    
+7. Tips on collaboration
+8. Selection final submissions
 
+    - best submissions locally and best on leaderboard
+    - monitor correlations: if correlations are too high and submissions exist with high score but significantly lower correlations, they could be considered too.
+    
+Add macro on jupyter notebook:
+
+1. `%macro -q __imp 1`
+2. `%store __imp`: to remove this line, add the following code to ipython_config.py
+3. `!echo "c = get_config()\nc.StoreMagics.autorestore = True" > ~/.ipython/profile_default/ipython_config.py`
