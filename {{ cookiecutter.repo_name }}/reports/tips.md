@@ -113,6 +113,15 @@ From the number of features to model configuration
 ### Use a library with frequent operations implemented
 
 
+# KazAnova's competition pipeline
 
+3,4,5: after trying the problem individually (shut from the outside world) for a week or so then kernels are explored too.
+
+1. Understand the problem 1d
+2. Exploratory analysis 1-2d
+3. Define cv strategy
+4. Feature engineering (until last 3-4 days)
+5. modelling (until last 3-4 days)
+6. ensembling last 3-4d
 
 
